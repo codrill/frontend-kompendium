@@ -1,23 +1,19 @@
 import ReactMarkdown from 'react-markdown/with-html'
 
-export type DefinitionProps = {
-  readonly slug: string
-  readonly meta: DefinitionMeta
-  readonly content: string
-}
-
-type DefinitionMeta = {
+export type DefinitionProps =  {
+  readonly id: string
   readonly question: string
+  readonly answer: string
 }
 
-export default function Definition({slug, meta: { question }, content}: DefinitionProps) {
+export default function Definition({id, question, answer}: DefinitionProps) {
   return (
-    <article id={ slug }>
+    <article id={ id }>
       <header>
         <h3>{ question }</h3>
       </header>
       <section>
-        <ReactMarkdown source={ content }/>
+        <ReactMarkdown source={ answer }/>
       </section>
     </article>
     )
