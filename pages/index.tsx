@@ -3,17 +3,43 @@ import fs from 'fs'
 import matter from 'gray-matter'
 
 import Layout from '../components/layout'
-import Definition, { DefinitionProps } from '../components/definition/definition'
 import { PATHS } from '../utils/const/paths'
+import TableOfContent from '../components/tableOfContent/tableOfContent'
+import DefinitionsList from '../components/definitionsList/definitionsList'
 
 type Props = {
-  readonly definitions: DefinitionProps[]
+  readonly definitions: {
+    readonly slug: string
+    readonly meta: DefinitionMeta
+    readonly content: string
+  }[]
+}
+
+type DefinitionMeta = {
+  readonly question: string
 }
 
 export default function Home({ definitions }: Props) {
   const generateDefinitionList = () => {
-    return definitions.map( (definition) => {
-      return <Definition key={ definition.slug } {...definition} />
+    return (
+      definitions.map( ( {slug, meta, content} ) => {
+        const { question } = meta
+        return {
+          id: slug,
+          question,
+          answer: content
+        }
+      })
+    )
+  }
+
+  const generateTableOfContent = () => {
+    return definitions.map( ({ slug, meta } ) => {
+      const { question: title } = meta
+      return {
+        anchor: slug,
+        title,
+      }
     })
   }
 
@@ -28,9 +54,8 @@ export default function Home({ definitions }: Props) {
       </Head>
 
       <Layout>
-        <div className="definitionsList">
-          { generateDefinitionList() }
-        </div>
+        <TableOfContent toc={generateTableOfContent()} />
+        <DefinitionsList definitions={generateDefinitionList()} />
       </Layout>
     </>
   )
