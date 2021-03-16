@@ -1,12 +1,12 @@
 export default function Layout({ children }) {
   return (
-    <div>
+    <div className="container mx-auto flex flex-col min-h-screen">
 
-      <header>
-        <h1>Frontend - kompendium</h1>
+      <header className="text-center">
+        <h1>Frontend - kompendium wiedzy</h1>
       </header>
-      <main>{ children }</main>
-      <footer>
+      <main className="flex-1">{ children }</main>
+      <footer className="text-center">
         <p>Created by {' '}
           <a
             href="https://codrill.pl"
