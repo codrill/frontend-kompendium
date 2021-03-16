@@ -1,12 +1,14 @@
+import styles from './layout.module.scss'
+
 export default function Layout({ children }) {
   return (
-    <div className="container mx-auto flex flex-col min-h-screen">
+    <div className={ styles.layout }>
 
-      <header className="text-center">
+      <header className={ styles.layoutHeader }>
         <h1>Frontend - kompendium wiedzy</h1>
       </header>
-      <main className="flex-1">{ children }</main>
-      <footer className="text-center">
+      <main className={ styles.layoutMain }>{ children }</main>
+      <footer className={ styles.layoutFooter }>
         <p>Created by {' '}
           <a
             href="https://codrill.pl"
