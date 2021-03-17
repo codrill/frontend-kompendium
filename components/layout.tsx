@@ -1,12 +1,14 @@
+import styles from './layout.module.scss'
+
 export default function Layout({ children }) {
   return (
-    <div>
+    <div className={ styles.layout }>
 
-      <header>
-        <h1>Frontend - kompendium</h1>
+      <header className={ styles.layoutHeader }>
+        <h1>Frontend - kompendium wiedzy</h1>
       </header>
-      <main>{ children }</main>
-      <footer>
+      <main className={ styles.layoutMain }>{ children }</main>
+      <footer className={ styles.layoutFooter }>
         <p>Created by {' '}
           <a
             href="https://codrill.pl"

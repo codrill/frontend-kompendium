@@ -1,0 +1,15 @@
+.layout {
+  @apply container mx-auto flex flex-col min-h-screen;
+}
+
+.layoutHeader {
+  @apply text-center;
+}
+
+.layoutMain {
+  @apply flex-1;
+}
+
+.layoutFooter {
+  @apply text-center;
+}

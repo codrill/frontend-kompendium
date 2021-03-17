@@ -1,0 +1,11 @@
+.definition {
+  @apply bg-blue-300 p-2 mb-2 rounded shadow-md;
+}
+
+.definitionHeader {
+  @apply font-semibold;
+}
+
+.definitionContent {
+  @apply bg-blue-100 p-2;
+}
