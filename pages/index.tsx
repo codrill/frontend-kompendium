@@ -2,10 +2,10 @@ import Head from 'next/head'
 import fs from 'fs'
 import matter from 'gray-matter'
 
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 import { PATHS } from '../utils/const/paths'
-import TableOfContent from '../components/tableOfContent/tableOfContent'
-import DefinitionsList from '../components/definitionsList/definitionsList'
+import { TableOfContent } from '../components/tableOfContent/tableOfContent'
+import { DefinitionsList } from '../components/definitionsList/definitionsList'
 
 type Props = {
   readonly definitions: {
@@ -19,22 +19,20 @@ type DefinitionMeta = {
   readonly question: string
 }
 
-export default function Home({ definitions }: Props) {
+export default function Home({ definitions }: Props): JSX.Element {
   const generateDefinitionList = () => {
-    return (
-      definitions.map( ( {slug, meta, content} ) => {
-        const { question } = meta
-        return {
-          id: slug,
-          question,
-          answer: content
-        }
-      })
-    )
+    return definitions.map(({ slug, meta, content }) => {
+      const { question } = meta
+      return {
+        id: slug,
+        question,
+        answer: content,
+      }
+    })
   }
 
   const generateTableOfContent = () => {
-    return definitions.map( ({ slug, meta } ) => {
+    return definitions.map(({ slug, meta }) => {
       const { question: title } = meta
       return {
         anchor: slug,
@@ -47,10 +45,7 @@ export default function Home({ definitions }: Props) {
     <>
       <Head>
         <title>Frontend - Kompendium</title>
-        <link
-          rel="icon"
-          href="/favicon.ico"
-        />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Layout>
@@ -61,7 +56,7 @@ export default function Home({ definitions }: Props) {
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(): Promise<{ props: Props }> {
   const files = fs.readdirSync(`${process.cwd()}/${PATHS.DEFINITIONS}`)
 
   const definitions = files.map((filename) => {
@@ -78,6 +73,6 @@ export async function getStaticProps() {
   return {
     props: {
       definitions,
-    }
+    },
   }
 }

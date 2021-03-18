@@ -1,13 +1,15 @@
-import Definition, { DefinitionProps } from '../definition/definition'
+import { Definition, DefinitionProps } from '../definition/definition'
 
 type Props = {
   definitions: DefinitionProps[]
 }
 
-export default function DefinitionsList({definitions}: Props) {
+export function DefinitionsList({ definitions }: Props): JSX.Element {
   return (
     <div className="definitionsList">
-      { definitions.map( (definition) => <Definition key={ definition.id } {...definition} />) }
+      {definitions.map((definition) => (
+        <Definition key={definition.id} {...definition} />
+      ))}
     </div>
   )
 }
