@@ -65,7 +65,7 @@ export async function getStaticProps(): Promise<{ props: Props }> {
 
     return {
       slug: filename.replace('.md', ''),
-      meta,
+      meta: meta as DefinitionMeta,
       content,
     }
   })
