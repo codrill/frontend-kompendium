@@ -1,6 +1,8 @@
 # Frontend Kompendium
 Kompendium wiedzy z zakresu Frontendu (web dev)
 
+Jesteśmy [LIVE](https://frontend-kompendium.netlify.app/)
+
 # Dlaczego akurat kompendium wiedzy?
 W naszej kilkuletniej przygodzie z programowaniem, oraz przeczytaniu niezliczonych przykładów czy tutoriali, spotkaliśmy się niejednokrotnie z tym, że odpowiedź
 na postawione pytanie była niejasna, niekonkretna albo po prostu wytłumaczona na przykładach, które ciężko wykorzystać w realnym projekcie. 
@@ -12,4 +14,4 @@ wejścia do pełnego zrozumienia problemu. Nasze kompendium będzie wyłącznie 
 
 #Zachęcamy do dzielenia się problemami i wiedzą
 Frontend Kompendium jest to projekt open-sourcowy. To oznacza, że możesz mieć wpływ na jego treść. Jeżeli interesuję Cię dane zagadnienie, którego nie potrafisz zrozumieć
-zgłoś nam nowy ticket w którym przedstawisz nam swój problem. My, jak najszybciej to możliwe, postaramy się dodać go do naszej bazy oraz składnie wytłumaczyć. 
+zgłoś nam nowy ticket w którym przedstawisz swój problem. My, najszybciej jak to możliwe, postaramy się dodać go do naszej bazy oraz składnie wytłumaczyć. 
