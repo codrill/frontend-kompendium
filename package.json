@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ./components/** ./pages/** -c .eslintrc.js --ext .ts,.tsx .",
-    "lint:fix": "eslint ./components/** ./pages/** -c .eslintrc.js --fix --ext .ts,.tsx .",
+    "lint": "eslint --ext .ts,.tsx .",
+    "lint:fix": "eslint --fix --ext .ts,.tsx .",
     "format": "prettier --write \"**/*.+(js|ts|tsx|json|sass|scss|md)\""
   },
   "eslintConfig": {
