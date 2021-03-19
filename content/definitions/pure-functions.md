@@ -26,6 +26,7 @@ Math.random() => 0.6818396543291918
 ```
 
 Aby bardziej zwizualizować sobie jak wygląda brudna funkcja, spójrzcie na przykład poniżej:
+
 ```javascript
 class ImpureClass {
   let value = 0 // zmienna globalna
@@ -38,8 +39,9 @@ class ImpureClass {
 ```
 
 Wyobraźmy sobie prostą klasę `ImpureClass` która ma globalną zmienną `value` z zainicjalizowaną
-wartością równą 0 oraz (jak się zaraz okaże, brudną) funkcje putAnyNumber. Zobaczcie co się dzieje w momencie gdy zaczniemy wywoływać funkcje `putAnyNumber`
+wartością równą 0 oraz (jak się zaraz okaże, brudną) funkcje `putAnyNumber`. Zobaczcie co się dzieje w momencie gdy zaczniemy wywoływać funkcje `putAnyNumber`
 wrzucając jej jako argument liczbę 1. 
+
 ```javascript
 putAnyNumber(1) //pierwsze wywołanie zwraca 2
 putAnyNumber(1) //drugie wywołanie zwraca 3
@@ -47,5 +49,5 @@ putAnyNumber(1) //trzecie wywołanie zwraca 4
 ```
 
 Jest to prosty przykład brudnej funkcji, która ma efekt uboczny. Efektem ubocznym tej funkcji jest inkrementowanie zmiennej globalnej `value`. Mimo, że
-za każdym razem podajemy, jako argument liczbę 1 to wynik zwracany NIE JEST zawsze taki sam, ponieważ wartość (defakto po za naszym blokiem funkcji - `function scope`) 
+za każdym razem podajemy, jako argument liczbę 1 to wynik zwracany NIE JEST zawsze taki sam, ponieważ wartość (defakto poza naszym blokiem funkcji - `function scope`) 
 do której dodajemy naszą liczbę 1, rośnie za każdym razem gdy funkcja jest wywoływana.
