@@ -12,6 +12,6 @@ Postaramy się wyjaśnić dane zagadnienie w sposób prosty i przejrzysty, zacho
 Większość, jak nie wszystkie, popularne oraz profesjonalne materiały są pisane w języku angielskim. Dla początkujących programistów może być to za wysokim progiem
 wejścia do pełnego zrozumienia problemu. Nasze kompendium będzie wyłącznie w języku polskim.
 
-#Zachęcamy do dzielenia się problemami i wiedzą
+# Zachęcamy do dzielenia się problemami i wiedzą
 Frontend Kompendium jest to projekt open-sourcowy. To oznacza, że możesz mieć wpływ na jego treść. Jeżeli interesuję Cię dane zagadnienie, którego nie potrafisz zrozumieć
 zgłoś nam nowy ticket w którym przedstawisz swój problem. My, najszybciej jak to możliwe, postaramy się dodać go do naszej bazy oraz składnie wytłumaczyć. 
