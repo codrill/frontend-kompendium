@@ -13,7 +13,7 @@ export function pureFunctionAdd(firstNumber, secondNumber) {
 ```
 
 Funkcja `pureFunctionAdd` zwraca nic innego jak sumę dwóch liczb podanych jako argumenty tej funkcji. Nic nie zmieniamy w innych scopach, nic nie usuwamy, nic nie kombinujemy, po
-prostu dodajemy dwie cyfry do siebie. Jest to idealny przykład czystej funkcji. Dużą zaletą czystych funkcji jest to, że łatwo się je testuje oraz przyjemniej
+prostu dodajemy dwie cyfry do siebie. Jest to idealny przykład czystej funkcji. Dużą zaletą takich funkcji jest to, że łatwo się je testuje oraz przyjemniej
 czyta.
 
 Prostym przykładem brudnej funkcji, z która nie raz się spotkacie, jest na przykład `Math.random()`. Za każdym razem gdy wywołamy funkcje zwraca ona losowo liczbę
@@ -25,14 +25,14 @@ Math.random() => 0.9947782934931475
 Math.random() => 0.6818396543291918
 ```
 
-Aby bardziej zwizualizować sobie jak wygląda brudna funkcja, spójrzcie na przykład poniżej:
+Aby bardziej uplastycznić sobie brudną funkcje, spójrzcie na przykład poniżej:
 
 ```javascript
-  let value = 0 // zmienna globalna
+  let value = 0
 
   export function putAnyNumber(number) {
-    this.value = this.value + 1
-    return number + this.value
+    value = value + 1
+    return number + value
   }
 ```
 
@@ -46,6 +46,6 @@ putAnyNumber(1) //drugie wywołanie zwraca 3
 putAnyNumber(1) //trzecie wywołanie zwraca 4
 ```
 
-Jest to prosty przykład brudnej funkcji, która ma efekt uboczny. Efektem ubocznym tej funkcji jest inkrementowanie zmiennej globalnej `value`. Mimo, że
+Jest to prosty przykład brudnej funkcji, która ma efekt uboczny. Efektem ubocznym tej funkcji jest inkrementowanie (zwiększanie) zmiennej `value`. Mimo, że
 za każdym razem podajemy, jako argument, liczbę 1 to wynik zwracany NIE JEST zawsze taki sam, ponieważ wartość `this.value` (defakto poza naszym blokiem funkcji - `function scope`) 
 do której dodajemy naszą liczbę 1, rośnie za każdym razem gdy funkcja jest wywoływana.
