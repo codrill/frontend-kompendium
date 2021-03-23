@@ -2,10 +2,19 @@
   @apply bg-blue-300 p-2 mb-2 rounded shadow-md;
 }
 
-.definitionHeader {
+.definition__header {
   @apply font-semibold;
 }
 
-.definitionContent {
+.definition__content {
   @apply bg-blue-100 p-2;
+}
+
+.codeBlock {
+  @apply relative;
+  padding-top: 0.5rem;
+}
+
+.codeBlock__language {
+  @apply absolute left-2 text-xs bg-gray-200 px-1 text-gray-500 font-mono;
 }
