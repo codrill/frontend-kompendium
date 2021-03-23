@@ -15,4 +15,16 @@
   a {
     @apply text-indigo-600 underline;
   }
+  ul {
+    @apply list-disc list-inside;
+  }
+  ol {
+    @apply list-decimal list-inside;
+  }
+  hr {
+    @apply border-t border-gray-500 my-2;
+  }
+  code:not([class]) {
+    @apply bg-gray-200 px-2;
+  }
 }
