@@ -31,7 +31,7 @@ const CodeBlock = ({ language, value }: CodeBlockProps) => {
 export function Definition({ id, question, answer }: DefinitionProps): JSX.Element {
   return (
     <article id={id} className={styles.definition}>
-      <header className={styles.definition__Header}>
+      <header className={styles.definition__header}>
         <p>{question}</p>
       </header>
       <section className={styles.definition__content}>
