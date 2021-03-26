@@ -1,5 +1,6 @@
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 import { ReactFragment } from 'react'
+
 import { GA_TRACKING_ID } from '../lib/gtag'
 
 type GetInitialPropsResponse = {
