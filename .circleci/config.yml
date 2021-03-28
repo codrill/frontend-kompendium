@@ -31,9 +31,7 @@ jobs:
       - run:
           name: Run Production build
           command: npm run build
-      - run:
-          name: SonarCloud Scan
-          command: sonarcloud/scan
+      - sonarcloud/scan
 
 workflows:
   build_app:
