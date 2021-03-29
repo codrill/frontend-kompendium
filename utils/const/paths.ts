@@ -1,3 +1,3 @@
 export const PATHS = {
-  DEFINITIONS: 'content/definitions'
+  DEFINITIONS: 'content/definitions',
 }
