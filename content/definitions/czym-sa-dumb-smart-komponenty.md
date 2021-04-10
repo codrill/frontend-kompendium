@@ -2,33 +2,36 @@
 question: Czym są dumb i smart komponenty?
 ---
 
-`Smart komponenty` wykonują logiczne operacje, strzelają po dane, wykonują obliczenia, modyfikują dane, które później mogą
-przekazać do innych komponentów. Często `smart komponenty` nazywamy kontenerami, których zadaniem jest właśnie przejęcie całego mechanizmu strzelania po API, czy
-operacji na danych.
+`Smart komponenty` wykonują logiczne operacje, strzelają po dane, modyfikują je i przesyłają przygotowane wartości do dumb komponentów. Nie odpowiadają za wyświetlanie informacji i nie zawierają styli CSS.
+Często smart komponenty nazywamy `kontenerami`. To podejście jest najczęściej stosowane w JSowych frameworkach jak `React` czy `Angular`.
 
+---
 
-`Dumb komponenty` natomiast są to komponenty, których rolą jest tylko i wyłącznie wyświetlenie/zaprezentowanie danych.
+`Dumb komponenty` natomiast są to komponenty, których rolą jest wyłącznie wyświetlenie otrzymanych danych. Zawierają HTML i CSS. 
+Nie używają zewnętrznych zależności (bibliotek), z wyjątkiem tych odpowiedzialnych za prezentacje informacji.
+
+---
 
 Przykład `Smart` i `Dumb` komponentu.
 
 `Smart Component`
 ```javascript
-export function SmartComponent() {
-    <strzał do Api> 
-    <przejęcie danych>
+function SmartComponent() {
+  // strzał do API
+  const data = fetch('https://api.jakas.strona').then(response => response.json())
 
-    <przekazanie danych do komponentu DumbCompontent>
+  // przekazanie danych do DumbComponent
+  <DumbComponent data={data} />
 }
 ```
 
 `Dumb Component`
 ```javascript
-
-    export function DumbComponent(props) {
-        return(
-            <div className="dumb-component-value">
-              {props.value}
-            </div>
-        )
-    }
+export function DumbComponent(props) {
+    return(
+        <div className="dumb-component-value">
+          {props.value}
+        </div>
+    )
+}
 ```
