@@ -2,7 +2,7 @@
 question: Czym jest HTML?
 ---
 
-`HyperText Markup Language` - jest to język rozumiany przez przeglądarki internetowe,
+    `HyperText Markup Language` - jest to język rozumiany przez przeglądarki internetowe,
 umożliwiający wyświetlanie treści w odpowiednio zorganizowany sposób.
 
 Tworzymy *szablon* strony z odpowiednich elementów (np `div`, `p`, `header`, `section`) tak, aby całość miała 
