@@ -2,7 +2,8 @@
 question: let, const, var
 ---
 
-Deklarując zmienne typu `let` można zmienić jej raz przypisaną wartość. Występuję w zakresie blokowym.
+`let`, `const` i `var` są rodzajami zmiennych w JavaScript. Przypisujemy do nich różne wartości, w celu ich późniejszego wykorzystywania.
+Zmiennej `let` używamy, gdy wiemy, że zapisane w niej początkowo dane ulegną zmianie.
 
 ```javascript
 let example = 'Hello'
@@ -11,9 +12,10 @@ example = 1
 console.log(example) // 1
 ```
 
-Gdy raz zainicjalizujemy zmienną typu `const` to nie możemy jej już później zmienić ani nadpisać, chyba że jest to obiekt, albo tablica. 
-Tworząc naszego `consta` jako `string` to w innym miejscu aplikacji nie możemy zrobić z niej `numbera` ani nawet nadpisać jej innym stringiem.
-`Consty` występują w zakresie blokowym.
+Zmiennej `const` używamy, gdy wartość przypisana nie ulegnie zmianie. Dlatego ten typ jest czasem nazywany 'stałą'.
+Wyjątek stanowią:
+- tablice — zawartość da się modyfikować wbudowanymi metodami tablicy (np. push, pop, shift).
+- obiekty — elementy wewnątrz obiektu są otwarte na modyfikacje.
 
 ```javascript
 const example = 'Hello'
@@ -21,5 +23,8 @@ console.log(example) // Hello
 example = 1 // Uncaught TypeError: Assignment to constant variable.
 ```
 
-Zmiennych typu `var` już nie używamy, ponieważ są przestarzałe i ciężko się takimi zmiennymi zarządza. `Var` posiada funkcyjny zakres, czyli jest dostępna w ramach funkcji.
-Wyjątkiem jest sytuacją w której została zadeklarowana po za funkcją wtedy jej zakres staję się zakresem globalnym. Innymi słowy z każdego miejsca mamy dostęp do tej zmiennej.
+`let` i `const` działają w zakresie blokowym. Oznacza to, że ich dostępność ograniczona jest przez klamry `{ const zmienna = 1 }`, poza którymi są niewidoczna.
+
+`var` działa podobnie jak `let` z tą różnicą, że jej zasięg jest ograniczony przez funkcje, a nie przez blok. Co więcej, `var`
+zadeklarowana poza funkcją, zyskuje zakres globalny. Innymi słowy, mamy do niej dostęp z każdego miejsca w aplikacji.
+Z powodów złożoności zakresu, jak i bezpieczeństwa, zmienne `var` nie są rekomendowane i w ich miejsce powinny być używane odpowiednio `const` lub `let`
