@@ -44,7 +44,6 @@ export default function Home({ definitions }: Props): JSX.Element {
   return (
     <>
       <Head>
-        <title>Frontend - Kompendium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
