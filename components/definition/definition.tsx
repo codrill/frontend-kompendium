@@ -2,10 +2,10 @@ import ReactMarkdown from 'react-markdown/with-html'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 import styles from './definition.module.scss'
+import { DefinitionMeta } from '../../pages'
 
-export type DefinitionProps = {
+export type DefinitionProps = DefinitionMeta & {
   readonly id: string
-  readonly question: string
   readonly answer: string
 }
 
@@ -28,11 +28,12 @@ const CodeBlock = ({ language, value }: CodeBlockProps) => {
   )
 }
 
-export function Definition({ id, question, answer }: DefinitionProps): JSX.Element {
+export function Definition({ id, question, category, answer }: DefinitionProps): JSX.Element {
   return (
     <article id={id} className={styles.definition}>
       <header className={styles.definition__header}>
         <p>{question}</p>
+        {category && <p className={styles.definition__category}>{category}</p>}
       </header>
       <section className={styles.definition__content}>
         <ReactMarkdown source={answer} renderers={{ code: CodeBlock }} />
