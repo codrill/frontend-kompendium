@@ -2,11 +2,11 @@
   @apply bg-blue-300 mb-2 rounded shadow-md;
 
   &__header {
-    @apply relative flex justify-between font-semibold p-2;
+    @apply relative flex items-center justify-between pl-2 font-semibold;
   }
 
   &__category {
-    @apply absolute top-0 right-0 bottom-0 bg-red-800 text-white p-2;
+    @apply relative bg-red-800 text-white p-2;
     &::before {
       @apply w-3 absolute top-0 bottom-0 left-0 -ml-2 bg-red-800 transform -skew-x-12;
       content: '';
