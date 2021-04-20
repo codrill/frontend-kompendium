@@ -1,5 +1,6 @@
 ---
 question: Różnica pomiędzy splice() i slice()
+category: JavaScript
 ---
 
 `Splice` wycina kawałek tablicy, modyfikując ją. Następnie zwraca wycięty kawałek, który możemy np przypisać do nowej zmiennej.

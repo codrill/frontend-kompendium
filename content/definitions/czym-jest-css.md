@@ -1,5 +1,6 @@
 ---
 question: Czym jest CSS?
+category: CSS
 ---
 
 `Cascading Style Sheets` - jest to język, używany w celu określenia części wizualnej strony, 

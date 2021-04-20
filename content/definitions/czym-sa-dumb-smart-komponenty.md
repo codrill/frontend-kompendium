@@ -1,9 +1,10 @@
 ---
 question: Czym są dumb i smart komponenty?
+category: JavaScript
 ---
 
 `Smart komponenty` wykonują logiczne operacje, strzelają po dane, modyfikują je i przesyłają przygotowane wartości do dumb komponentów. Nie odpowiadają za wyświetlanie informacji i nie zawierają styli CSS.
-Często smart komponenty nazywamy `kontenerami`. To podejście jest najczęściej stosowane w JSowych frameworkach jak `React` czy `Angular`.
+Często smart komponenty nazywamy *kontenerami*. To podejście jest najczęściej stosowane w JSowych frameworkach jak *React* czy *Angular*.
 
 ---
 
@@ -11,8 +12,6 @@ Często smart komponenty nazywamy `kontenerami`. To podejście jest najczęście
 Nie używają zewnętrznych zależności (bibliotek), z wyjątkiem tych odpowiedzialnych za prezentacje informacji.
 
 ---
-
-Przykład `Smart` i `Dumb` komponentu.
 
 `Smart Component`
 ```javascript
