@@ -16,7 +16,7 @@ class FEKDocument extends Document {
     return initialProps
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Html lang="pl-PL">
         <Head>

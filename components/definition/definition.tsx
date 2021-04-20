@@ -1,8 +1,9 @@
 import ReactMarkdown from 'react-markdown/with-html'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
-import styles from './definition.module.scss'
 import { DefinitionMeta } from '../../pages'
+
+import styles from './definition.module.scss'
 
 export type DefinitionProps = DefinitionMeta & {
   readonly id: string
