@@ -1,5 +1,6 @@
 ---
 question: Czym jest HTML?
+category: HTML
 ---
 
 `HyperText Markup Language` - jest to język rozumiany przez przeglądarki internetowe,

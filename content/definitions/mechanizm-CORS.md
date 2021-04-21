@@ -1,5 +1,6 @@
 ---
 question: Mechanizm CORS
+category: Bezpieczeństwo
 ---
 
 `Cross-origin resource sharing` - jest to mechanizm, który **pozwala** na komunikację HTTP naszej strony z zewnętrznymi źródłami.

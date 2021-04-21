@@ -1,5 +1,6 @@
 ---
 question: let, const, var
+category: JavaScript
 ---
 
 `let`, `const` i `var` są rodzajami zmiennych w JavaScript. Przypisujemy do nich różne wartości, w celu ich późniejszego wykorzystywania.

@@ -16,11 +16,11 @@ class FEKDocument extends Document {
     return initialProps
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Html lang="pl-PL">
         <Head>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}></script>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
             async
             dangerouslySetInnerHTML={{

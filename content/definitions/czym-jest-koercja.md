@@ -1,5 +1,6 @@
 ---
 question: Czym jest koercja?
+category: JavaScript
 ---
 Jest to niejawna konwersja jednego prymitywnego typu na drugi, na przykład ze `string` na `number`.
 
