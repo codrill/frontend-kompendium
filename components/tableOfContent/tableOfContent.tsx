@@ -13,8 +13,10 @@ type Props = {
 export function TableOfContent({ toc }: Props): JSX.Element {
   const { setVisibility } = React.useContext(TocVisibilityContext)
 
+  const changeHandler = (inView) => setVisibility(inView)
+
   return (
-    <InView as="div" className={styles.tableOfContent} onChange={(inView) => setVisibility(inView)}>
+    <InView as="div" className={styles.tableOfContent} onChange={changeHandler}>
       <h2>Spis treści</h2>
 
       <ol className={styles.tableOfContent__list}>
