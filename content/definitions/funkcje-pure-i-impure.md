@@ -1,5 +1,6 @@
 ---
 question: Funkcje pure i impure
+category: JavaScript
 ---
 
 Czysta funkcja to taka, która przyjmując te same argumenty wypluwa ZAWSZE ten sam wynik i nie produkuje żadnych efektów ubocznych (side effects).

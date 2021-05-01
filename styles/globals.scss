@@ -22,7 +22,7 @@
     @apply list-decimal list-inside;
   }
   hr {
-    @apply border-t border-gray-500 my-2;
+    @apply border-t border-dashed border-gray-300 my-2;
   }
   code:not([class]) {
     @apply bg-gray-200 px-2;

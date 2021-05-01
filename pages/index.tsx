@@ -1,31 +1,38 @@
 import Head from 'next/head'
 import fs from 'fs'
 import matter from 'gray-matter'
+import React from 'react'
 
 import { Layout } from '../components/layout'
 import { PATHS } from '../utils/const/paths'
 import { TableOfContent } from '../components/tableOfContent/tableOfContent'
 import { DefinitionsList } from '../components/definitionsList/definitionsList'
+import { TocVisibilityController } from '../state/tocVisibility.context'
 
-type Props = {
-  readonly definitions: {
-    readonly slug: string
-    readonly meta: DefinitionMeta
-    readonly content: string
-  }[]
+type DefinitionsProps = {
+  readonly definitions: Definition[]
 }
 
-type DefinitionMeta = {
+type Definition = {
+  readonly slug: string
+  readonly meta: DefinitionMeta
+  readonly content: string
+}
+
+export type DefinitionMeta = {
   readonly question: string
+  readonly category: string
 }
 
-export default function Home({ definitions }: Props): JSX.Element {
+export default function Home({ definitions }: DefinitionsProps): JSX.Element {
   const generateDefinitionList = () => {
     return definitions.map(({ slug, meta, content }) => {
-      const { question } = meta
+      const { question, category } = meta
+
       return {
         id: slug,
         question,
+        category,
         answer: content,
       }
     })
@@ -44,19 +51,20 @@ export default function Home({ definitions }: Props): JSX.Element {
   return (
     <>
       <Head>
-        <title>Frontend - Kompendium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>
-        <TableOfContent toc={generateTableOfContent()} />
-        <DefinitionsList definitions={generateDefinitionList()} />
-      </Layout>
+      <TocVisibilityController>
+        <Layout>
+          <TableOfContent toc={generateTableOfContent()} />
+          <DefinitionsList definitions={generateDefinitionList()} />
+        </Layout>
+      </TocVisibilityController>
     </>
   )
 }
 
-export async function getStaticProps(): Promise<{ props: Props }> {
+export async function getStaticProps(): Promise<{ props: DefinitionsProps }> {
   const files = fs.readdirSync(`${process.cwd()}/${PATHS.DEFINITIONS}`)
 
   const definitions = files.map((filename) => {

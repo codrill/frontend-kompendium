@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react'
 
+import { ScrollToTop } from './scrollToTop/scrollToTop'
 import styles from './layout.module.scss'
 
 // Using JSX.Element as return type based on discouraged React.FC type
@@ -19,6 +20,7 @@ export function Layout({ children }: PropsWithChildren<unknown>): JSX.Element {
           </a>
         </p>
       </footer>
+      <ScrollToTop />
     </div>
   )
 }

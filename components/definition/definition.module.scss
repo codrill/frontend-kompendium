@@ -1,13 +1,21 @@
 .definition {
-  @apply bg-blue-300 p-2 mb-2 rounded shadow-md;
-}
+  @apply bg-blue-300 mb-2 rounded shadow-md;
 
-.definition__header {
-  @apply font-semibold;
-}
+  &__header {
+    @apply relative flex items-center justify-between pl-2 font-semibold;
+  }
 
-.definition__content {
-  @apply bg-blue-100 p-2;
+  &__category {
+    @apply relative bg-red-800 text-white p-2;
+    &::before {
+      @apply w-3 absolute top-0 bottom-0 left-0 -ml-2 bg-red-800 transform -skew-x-12;
+      content: '';
+    }
+  }
+
+  &__content {
+    @apply bg-blue-100 p-2;
+  }
 }
 
 .codeBlock {
