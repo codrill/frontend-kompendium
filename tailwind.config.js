@@ -5,6 +5,7 @@ module.exports = {
     extend: {},
   },
   variants: {
+    transitionProperty: ['motion-safe', 'motion-reduce'],
     extend: {},
   },
   plugins: [],

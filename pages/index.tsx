@@ -1,11 +1,13 @@
 import Head from 'next/head'
 import fs from 'fs'
 import matter from 'gray-matter'
+import React from 'react'
 
 import { Layout } from '../components/layout'
 import { PATHS } from '../utils/const/paths'
 import { TableOfContent } from '../components/tableOfContent/tableOfContent'
 import { DefinitionsList } from '../components/definitionsList/definitionsList'
+import { TocVisibilityController } from '../state/tocVisibility.context'
 
 type DefinitionsProps = {
   readonly definitions: Definition[]
@@ -52,10 +54,12 @@ export default function Home({ definitions }: DefinitionsProps): JSX.Element {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>
-        <TableOfContent toc={generateTableOfContent()} />
-        <DefinitionsList definitions={generateDefinitionList()} />
-      </Layout>
+      <TocVisibilityController>
+        <Layout>
+          <TableOfContent toc={generateTableOfContent()} />
+          <DefinitionsList definitions={generateDefinitionList()} />
+        </Layout>
+      </TocVisibilityController>
     </>
   )
 }

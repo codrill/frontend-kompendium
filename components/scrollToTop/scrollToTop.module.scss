@@ -1,0 +1,35 @@
+.scrollToTop {
+  @apply fixed -bottom-10 right-2 opacity-0 cursor-pointer z-10 transition-opacity ease-in-out;
+  transition: opacity .5s, bottom .3s;
+
+  &::before, &::after {
+    @apply block;
+    content: '';
+  }
+
+  &::before {
+    @apply w-0 h-0 border-solid;
+    border: {
+      left: {
+        width: 15px;
+        color: transparent;
+      }
+      right: {
+        width: 15px;
+        color: transparent;
+      }
+      bottom: {
+        width: 20px;
+        color: theme('colors.blue.500');
+      }
+    }
+  }
+
+  &::after {
+    @apply h-2 w-4 bg-blue-600 mx-auto my-0;
+  }
+
+  &.visible {
+    @apply bottom-2 opacity-60 hover:opacity-100;
+  }
+}
