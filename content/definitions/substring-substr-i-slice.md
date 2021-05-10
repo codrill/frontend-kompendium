@@ -3,7 +3,8 @@ question: Substring, substr i slice
 category: JavaScript
 ---
 
-Wszystkie trzy metody, są wywoływane na danych tekstowych (string) oraz nie modyfikują oryginalnej wartości, zamiast tego zwracają nowy string.
+Wszystkie trzy metody, są wywoływane na danych tekstowych (*string*). 
+Nie modyfikują oryginalnej wartości, zamiast tego zwracają nowy string.
 
 - `Substring` Przyjmuje dwa parametry numeryczne (indeksy znaków) i zwraca to, co znajduje się w podanym zakresie.
 Pierwszy parametr jest wymagany, drugi opcjonalny (domyślnie jest to wartości).
