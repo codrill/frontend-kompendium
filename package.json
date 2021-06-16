@@ -14,7 +14,7 @@
     "extends": "react-app"
   },
   "dependencies": {
-    "next": "10.0.8",
+    "next": "^11.0.0",
     "next-seo": "^4.24.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
