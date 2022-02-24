@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://frontend-kompendium.codrill.eu/sitemap.xml
