@@ -1,5 +1,5 @@
 ---
-question: Czym inferencja typów (Type Inference) ?
+question: Czym jest inferencja typów (Type Inference) ?
 category: TypeScript
 ---
 
