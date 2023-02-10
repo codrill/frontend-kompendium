@@ -14,10 +14,10 @@
     "extends": "react-app"
   },
   "dependencies": {
-    "next": "^11.0.0",
-    "next-seo": "^4.26.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "next": "^13.1.6",
+    "next-seo": "^5.15.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-intersection-observer": "^8.31.1",
     "react-syntax-highlighter": "^15.4.3",
     "sass": "^1.35.0"
@@ -29,7 +29,7 @@
     "@typescript-eslint/parser": "^4.27.0",
     "autoprefixer": "^10.3.1",
     "eslint": "^7.28.0",
-    "eslint-config-next": "^11.0.0",
+    "eslint-config-next": "^13.1.6",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-flowtype": "^5.7.2",
