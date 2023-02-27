@@ -27,9 +27,7 @@ W powyższym przykładzie wartością zmiennej `y` będzie "domyslna wartość",
 Gdybyśmy zmienili wartość zmiennej `x` na wartość inna niż `null` lub `undefined`, wartość zmiennej `y` byłaby równa wartości zmiennej `x`.
 
 ---
-
 **Nullish coalescing assignment** (`??=`) to operator wprowadzony w **ECMAScript 2021**, który umożliwia przypisanie wartości do zmiennej, ale tylko wtedy, gdy wartość zmiennej jest `null` lub `undefined`.
-&nbsp;  
 &nbsp;
 
 Operator ten działa w następujący sposób: 
